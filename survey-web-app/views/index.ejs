@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SURVEY</title>
+    <script src="/scripts/main.js"></script>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+
+  <body onload="displayFill();">
+    <div class="header">
+      <div class="header-title">_Surveys</div>
+      <div class="header-links">
+        <a href="#fill" id="fillLink" onclick="displayFill()">
+          FILL OUT SURVEY
+        </a>
+        <a
+          href="#results"
+          id="displayLink"
+          onclick="displaySurvey('<%=surveyTotal %>')"
+        >
+          VIEW SURVEY RESULTS
+        </a>
+      </div>
+    </div>
+
+    <div id="form-container" class="form-container">
+      <form action="/" id="surveyForm" method="post">
+        <div class="form-section">
+          <div class="section-label">Personal Details:</div>
+
+          <div class="section-fields">
+            <label>
+              Full Names <br />
+              <input type="text" name="fullname" id="fullname" required />
+              <br />
+            </label>
+
+            <label>
+              Email <br />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                required
+                autocomplete="off"
+              />
+              <br />
+            </label>
+            <br />
+
+            <label>
+              Date of Birth <br />
+              <input
+                type="date"
+                name="dob"
+                id="dob"
+                required
+                min="1905-01-01"
+                max="2020-12-31"
+                value="2020-12-13"
+              />
+              <br />
+            </label>
+            <br />
+
+            <label>
+              Contact Number: <br />
+              <input type="tel" name="contact" id="contact" required />
+            </label>
+            <br />
+            <div class="foodSection">
+              <span class="question">
+                <br />What is your favorite food? <br />
+              </span>
+              <div id="favorite">
+                <label>
+                  <input type="checkbox" name="likePizza" id="pizza" />
+                  Pizza
+                </label>
+                <label>
+                  <input type="checkbox" name="likePasta" id="pasta" /> Pasta
+                </label>
+                <label>
+                  <input
+                    type="checkbox"
+                    name="likePapAndWors"
+                    id="papandwors"
+                  />
+                  Pap and Wors
+                </label>
+                <br />
+                <label>
+                  <input type="checkbox" name="food" id="other" /> Other
+                </label>
+                <br />
+              </div>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="tableSection">
+          <span id="rate-question">
+            Please rate your level of agreement on a scale from 1 to 5, with 1
+            being "strongly agree" and 5 being "strongly disagree." <br />
+            <br />
+          </span>
+          <br />
+          <table>
+            <tr>
+              <th></th>
+              <th>Strongly Agree</th>
+              <th>Agree</th>
+              <th>Neutral</th>
+              <th>Disagree</th>
+              <th>Strongly Disagree</th>
+            </tr>
+
+            <tr>
+              <td name="movieRating" id="movieRating">
+                I like to watch movies
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="movieRate"
+                  onclick="movieRateClicked(1);"
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="movieRate"
+                  onclick="movieRateClicked(2);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="movieRate"
+                  onclick="movieRateClicked(3);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="movieRate"
+                  onclick="movieRateClicked(4);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="movieRate"
+                  onclick="movieRateClicked(5);"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td name="radioRating" id="radioRating">
+                I like to listen to radio
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="radioRate"
+                  onclick="radioRateClicked(1);"
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="radioRate"
+                  onclick="radioRateClicked(2);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="radioRate"
+                  onclick="radioRateClicked(3);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="radioRate"
+                  onclick="radioRateClicked(4);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="radioRate"
+                  onclick="radioRateClicked(5);"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td name="eatRating" id="eatRating">I like to eat out</td>
+              <td>
+                <input
+                  type="radio"
+                  name="eatRate"
+                  onclick="eatRateClicked(1);"
+                  required
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="eatRate"
+                  onclick="eatRateClicked(2);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="eatRate"
+                  onclick="eatRateClicked(3);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="eatRate"
+                  onclick="eatRateClicked(4);"
+                />
+              </td>
+              <td>
+                <input
+                  type="radio"
+                  name="eatRate"
+                  onclick="eatRateClicked(5);"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td name="tvRating" id="tvRating">I like to watch TV</td>
+              <td>
+                <input
+                  type="radio"
+                  name="tvRate"
+                  onclick="tvRateClicked(1);"
+                  required
+                />
+              </td>
+              <td>
+                <input type="radio" name="tvRate" onclick="tvRateClicked(2);" />
+              </td>
+              <td>
+                <input type="radio" name="tvRate" onclick="tvRateClicked(3);" />
+              </td>
+              <td>
+                <input type="radio" name="tvRate" onclick="tvRateClicked(4);" />
+              </td>
+              <td>
+                <input type="radio" name="tvRate" onclick="tvRateClicked(5);" />
+              </td>
+            </tr>
+          </table>
+          <br />
+          <button type="submit" onclick="saveSurvey()">Submit</button>
+        </div>
+      </form>
+    </div>
+    <div id="zero-survey" class="results-container">No Surveys Available</div>
+    <div id="results-container" class="results-container">
+      <h3>Survey Results</h3>
+      <label> Total number of surveys: </label
+      ><span class="results"><%=surveyTotal%></span>
+      <br />
+      <label> Average Age: </label
+      ><span class="results"><%= ageAverage %></span>
+      <br />
+      <label> Oldest person who participated in survey: </label>
+      <span class="results"> <%=oldest %> years old </span>
+
+      <br />
+      <label> Youngest person who participated in survey: </label>
+      <span class="results"><%=youngest %> years old </span>
+
+      <br />
+      <br />
+      <label> Percentage of people who like Pizza: </label>
+      <span class="results"><%=percentageOfPizza %>% </span>
+
+      <br />
+      <label> Percentage of people who like Pasta: </label>
+      <span class="results"><%=percentageOfPasta %>% </span>
+      <br />
+      <label> Percentage of people who like Pap and Wors: </label>
+      <span class="results"> <%= percentageOfPapAndWOrs%>%</span>
+
+      <br />
+      <br />
+      <label> People who like to watch movies </label>
+      <span class="results"> <%= averageRateOfMovies %> </span>
+
+      <br />
+      <label> People who like listen to radio: </label>
+      <span class="results"><%= averageRateOfRadio %> </span>
+
+      <br />
+      <label> People who like to eat out: </label>
+      <span class="results"><%= averageRateOfEatOut %> </span>
+
+      <br />
+      <label> People who like to watch TV: </label>
+      <span class="results"><%= averageRateOfTv %> </span>
+
+      <br />
+    </div>
+  </body>
+</html>

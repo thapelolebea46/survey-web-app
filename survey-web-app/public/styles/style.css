@@ -1,0 +1,224 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.question {
+  right: 10pt;
+  display: flex;
+  justify-content: space-between;
+}
+table,
+th,
+td {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  text-align: center;
+}
+tr {
+  height: 4px;
+}
+table {
+  width: 80%;
+}
+label {
+  font-size: 8pt;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.results-container {
+  display: none;
+}
+.results-container label {
+  font-size: 16pt;
+
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+th,
+td {
+  font-size: 13px;
+  font-weight: 100;
+}
+#col1 {
+  width: 50%;
+}
+.form-container {
+  max-width: 600px;
+  margin: auto;
+}
+th {
+  background-color: #969696;
+}
+.foodSection {
+  font-size: 10px;
+}
+.tableSection {
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+  left: 30px;
+  width: 90%;
+  font-size: 8pt;
+}
+h5 {
+  gap: 1px;
+  display: flex;
+}
+.form-container {
+  display: flex;
+  display: block;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+.header-left {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.header-right a {
+  margin-left: 12px;
+  text-decoration: none;
+  color: #333;
+}
+
+.header-right a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+#rate-question {
+  font-size: 15px;
+  position: absolute;
+  left: -99px;
+  display: block;
+  width: 100%;
+  bottom: 245px;
+}
+th,
+td {
+  border: 1px solid blue;
+  text-align: center;
+  padding: 10px;
+  white-space: nowrap;
+}
+
+.left {
+  left: 10px;
+  margin-right: 1px;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"],
+input[type="radio"],
+input[type="checkbox"] {
+  border: 1px solid blue;
+  padding: 5px;
+}
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="tel"] {
+  width: 250px;
+  height: 10px;
+  margin-top: 1px;
+  margin-bottom: 1px;
+}
+button[type="submit"] {
+  background-color: blue;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  right: 40px;
+}
+input[type="checkbox"] {
+  transform: scale(0.75); /* You can adjust this value to your preference */
+  margin-right: 5px;
+}
+
+.results-container {
+  display: none;
+
+  width: 50%;
+  display: flex;
+  position: absolute;
+  left: 220px;
+}
+h3 {
+  position: relative;
+  text-align: center;
+}
+#zero-survey {
+  position: relative;
+  text-align: center;
+  font-size: 24pt;
+}
+.results {
+  position: absolute;
+  text-align: right;
+  right: -200px;
+  float: none;
+  font-size: 16pt;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-links {
+  display: flex;
+  gap: 20px;
+}
+
+.header-links a {
+  text-decoration: none;
+
+  font-weight: 500;
+}
+.form-section {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.section-label {
+  position: fixed;
+  left: 30px;
+  top: 80px;
+  width: 150px;
+
+  padding-left: 10px;
+}
+.question {
+  position: fixed;
+  left: 30px;
+
+  width: 150px;
+  font-size: 8pt;
+}
+#favorite {
+  font-size: 16pt;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.section-fields {
+  position: absolute;
+  left: 290px;
+  top: 80px;
+  flex: 1;
+}

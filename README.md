@@ -44,5 +44,51 @@ server.js         # Entry point
 
 This was developed as an internship submission, but you're welcome to collaborate or offer feedback.
 
+
+🛠️ Setup Instructions
+Clone the repository
+
+bash
+
+git clone <your-repo-url>
+
+
+cd lifestyle-survey-app
+
+
+Install dependencies
+
+bash
+
+
+npm install
+
+
+Configure .env
+
+
+Create a .env file in the root:
+with the following
+
+
+MONGO_URI=your_mongodb_connection_string
+
+PORT=4000
+
+
+Run the app
+
+
+bash
+npm start
+
+
+View in browser
+
+
+
+http://localhost:4000
+🙌
+
 Thapelo Lebea
 📫 Email: thapeleolebea46@gmail.com

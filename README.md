@@ -2,7 +2,7 @@
 
 📌 Overview
 
-This project was created as part of a practical assessment for an internship opportunity.
+
 
 The goal is to demonstrate the ability to build a full-stack application that handles user input, data storage, and basic data analysis. 
 
